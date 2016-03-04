@@ -6,15 +6,17 @@
 ### Start all services
 
 ```
-cd devops-lb2ws-training
+cd devops-training-lb2ws
 
 docker-compose up -d
 ```
 
 ### Test web servers :
-http://localhost:5011/
-http://localhost:5012/
-http://localhost:5050/
+```
+http://localhost:5011/   Will be up.
+http://localhost:5012/   will be up.
+http://localhost:5050/   Alternate between : Version A, Version B
+```
 
 ### Stop the web server A
 ```
@@ -22,10 +24,11 @@ docker kill mywebserver.a
 ```
 
 ### Test web servers :
-http://localhost:5011/
-http://localhost:5012/
-http://localhost:5050/
-
+```
+http://localhost:5011/   Will be down !
+http://localhost:5012/   Will be up.
+http://localhost:5050/   Only : Version B 
+```
 
 ### Deallocate resources
 ```
