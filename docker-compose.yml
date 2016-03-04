@@ -1,0 +1,24 @@
+thewebserver.a:
+    image: ykandrirody/docker-netmvc-a
+    container_name: mywebserver.a
+    ports:
+     - 5011:80
+
+thewebserver.b:
+    image: ykandrirody/docker-netmvc-b
+    container_name: mywebserver.b
+    ports:
+     - 5012:80
+
+theloadbalancer:
+    image: ykandrirody/docker-haproxy-lb2s
+    container_name: myloadbalancer
+    environment:
+     - APP1=the-app1
+     - APP2=the-app2
+     - PORT=80
+    links:
+     - thewebserver.a:the-app1
+     - thewebserver.b:the-app2
+    ports:
+     - 5050:80
