@@ -3,6 +3,12 @@
 
 ## Usage
 
+### Clone the repository locally
+```
+git clone https://github.com/ykandrirody/devops-training-lb2ws.git
+```
+
+
 ### Start all services
 
 ```
